@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 550px;
+    height: 500px;
+    margin-top: 30px;
+  
+}
+
+h1{
+    font-family: monospace;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.formgroup{
+    width: 500px;
+    font-size: 18px;
+    padding: 5px;
+   font-family: monospace;
+   font-weight: 600;
+}
+
+.DB{
+    margin-top: 25px;
+    border-radius: 20px ;
+}
+

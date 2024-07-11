@@ -1,8 +1,8 @@
-.home-container {
+/* .home-container {
     text-align: center;
-    padding-top: 100px; /* Adjusted to account for the fixed navbar */
+    padding-top: 100px; /* Adjusted to account for the fixed navbar 
   }
-  
+/*   
   .home-main {
     display: flex;
     justify-content: space-evenly;
@@ -71,4 +71,184 @@
   .info-button:hover {
     background-color: #45a049;
     transform: scale(1.05);
+  }  */
+
+  /*New*/
+
+  .HeroImg{
+    background-color: #222C64;
+    height: 350px;
+    width: 1430px;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    font-family: monospace;
+    color: aliceblue; 
+
   }
+
+  .quote{
+    margin-top: 45px;
+    margin-right: 100px;
+  }
+
+  b{
+    font-size: 60px;
+    font-family: monospace;
+    font-weight: 600;
+  }
+
+  .BoxContainer{
+    display: flex;
+    justify-content: space-around;
+  } 
+
+    .Box {
+      width: 400px;
+      height: 220px;
+      background-color: #ff9cc5;
+      border-radius: 20px;
+      display: flex;
+      margin: 4px;
+      margin-top: 0px;
+      font-size: 2px;
+  }
+
+.icon{
+  display: flex;
+  align-items: end;
+}
+
+  .box1{
+    margin-left: 10px;
+    background-color: #FFAEBC;
+    font-family: monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: #192255;
+      display: flex;
+      justify-content: center;
+      padding: 20px 20px 10px 20px;
+      border: #e98495 solid 4px;
+  }
+
+  .box1 .icon{
+    color : #e98495;
+  }
+
+  .box2{
+    background-color: #A0E7E5;
+    font-family: monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: #192255;
+      display: flex;
+      justify-content: center;
+      padding: 20px 20px 10px 20px;
+      border: #85c0be solid 4px;
+  }
+
+  .box2 .icon{
+    color : #85c0be;
+  }
+
+
+  .box3{
+    background-color: #B4F8C8;
+    font-family: monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: #192255;
+      display: flex;
+      justify-content: center;
+      padding: 20px 20px 10px 20px;
+      border: #7dd397 solid 4px;
+  }
+
+  .box3 .icon{
+    color : #7dd397;
+  }
+
+  .box4{
+    background-color: #FBE7C6;
+    font-family: monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: #192255;
+      display: flex;
+      justify-content: center;
+      padding: 20px 20px 10px 20px;
+      border: #ebd0a8 solid 4px;
+  }
+
+  .box4 .icon{
+    color : #ebd0a8;
+  }
+
+  .Box:hover{
+    transform: scale(1.01);
+  }
+  
+  .home-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  } 
+
+  .info-cards {
+    display: flex;
+    gap: 1cm;
+  }
+  
+  .info-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    backdrop-filter: blur(5px);
+  }
+  
+  .info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .info-card p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .info-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration:underline #4CAF50;
+  }
+  
+  .info-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    text-decoration:underline #4CAF50;
+  }  

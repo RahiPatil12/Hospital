@@ -1,4 +1,3 @@
-// src/components/AppointmentForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AppointmentForm.css';
@@ -11,7 +10,7 @@ const AppointmentForm = () => {
     email: '',
     phoneNumber: '',
     appointmentType: '',
-    consent: false,
+    consent: false
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -26,7 +25,7 @@ const AppointmentForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/appointments', formData)
+    axios.post('/api/book-appointment', formData)
       .then(response => {
         setSuccess('Appointment booked successfully');
         setError('');
@@ -49,7 +48,6 @@ const AppointmentForm = () => {
   return (
     <div className="appointment-container">
       <div className="appointment-form">
-        {/* <h2>Book an Appointment</h2> */}
         {error && <div className="error">{error}</div>}
         {success && <div className="success">{success}</div>}
         <form onSubmit={handleSubmit}>
@@ -146,7 +144,7 @@ const AppointmentForm = () => {
                 onChange={handleChange}
                 required
               />
-              I agree to the TeleMedicine Terms & Conditions, Telehealth Consent, Privacy Policy and Notice of Privacy Practices.
+              I agree to the TeleMedicine Terms & Conditions, Telehealth Consent, Privacy Policy, and Notice of Privacy Practices.
             </label>
           </div>
           <button type="submit">Book Appointment</button>
