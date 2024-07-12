@@ -8,7 +8,7 @@ const jwtSecret = process.env.JWT_SECRET || 'your_jwt_secret';
 
 // Sign in route
 router.post('/signin', async (req, res) => {
-  const { username, email, password, confirmPassword } = req.body;
+  const { email, password } = req.body;
 
   try {
     // Check if user exists

@@ -5,10 +5,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 // Import route modules
-const authRoutes = require('./routes/auth'); 
-const applicationRoutes = require('./routes/applicationRoutes'); 
+const authRoutes = require('./routes/authRoutes'); 
+const applicationRoutes = require('./routes/applicationRoutes');
 const signRoutes = require('./routes/signRoutes'); 
 const contactRoutes=require('./routes/contactRoutes');
+// const appointmentRoutes = require ('./routes/appointmentRoutes');
+
 
 const app = express();
 const PORT = 5000;
@@ -16,6 +18,8 @@ const PORT = 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json());
+
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://Rahi:8Im2amSFEhAfKywK@cluster0.im4qadt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
@@ -24,7 +28,7 @@ mongoose.connect('mongodb+srv://Rahi:8Im2amSFEhAfKywK@cluster0.im4qadt.mongodb.n
   .catch(err => console.log(err));
 
 // Appointment schema and model
-const appointmentSchema = new mongoose.Schema({
+const appointmentRoutes = new mongoose.Schema({
   firstName: String,
   lastName: String,
   dateOfBirth: Date,
@@ -33,11 +37,11 @@ const appointmentSchema = new mongoose.Schema({
   appointmentType: String
 });
 
-const Appointment = mongoose.model('Appointment', appointmentSchema);
+const Appointment = mongoose.model('Appointment', appointmentRoutes);
 
 // Appointment routes
 // Create a new appointment
-app.post('/book-appointment', async (req, res) => {
+app.post('/appoint', async (req, res) => {
   const appointment = new Appointment(req.body);
   try {
     const newAppointment = await appointment.save();
@@ -84,10 +88,10 @@ app.delete('/appointments/:id', async (req, res) => {
 });
 
 // authentication routes
-app.use('/api/auth', authRoutes); 
+app.use('/api/register', authRoutes); 
 
 // application routes
-app.use('/api/application', applicationRoutes); 
+app.use('/api', applicationRoutes); 
 
 //sign-in routes 
 app.use('/api/signin', signRoutes); 
@@ -96,5 +100,5 @@ app.use('/api/signin', signRoutes);
 app.use('/api/contact', contactRoutes);
 
 app.listen(PORT, () => {
-  console.log('Server running on port', ${PORT});
+  console.log('Server running on port', {PORT});
 });

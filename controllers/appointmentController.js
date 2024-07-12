@@ -1,7 +1,7 @@
-const Appointment = require('../models/appointmentModel');
+import Appointment, { find, findByIdAndUpdate, findByIdAndDelete } from '../models/appointmentModel';
 
 // Create a new appointment
-exports.createAppointment = async (req, res) => {
+export async function createAppointment(req, res) {
     try {
         const newAppointment = new Appointment(req.body);
         await newAppointment.save();
@@ -9,22 +9,22 @@ exports.createAppointment = async (req, res) => {
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
-};
+}
 
 // Get all appointments
-exports.getAllAppointments = async (req, res) => {
+export async function getAllAppointments(req, res) {
     try {
-        const appointments = await Appointment.find();
+        const appointments = await find();
         res.status(200).json(appointments);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-};
+}
 
 // Update an appointment by ID
-exports.updateAppointment = async (req, res) => {
+export async function updateAppointment(req, res) {
     try {
-        const appointment = await Appointment.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const appointment = await findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!appointment) {
             return res.status(404).json({ error: 'Appointment not found' });
         }
@@ -32,12 +32,12 @@ exports.updateAppointment = async (req, res) => {
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
-};
+}
 
 // Delete an appointment by ID
-exports.deleteAppointment = async (req, res) => {
+export async function deleteAppointment(req, res) {
     try {
-        const appointment = await Appointment.findByIdAndDelete(req.params.id);
+        const appointment = await findByIdAndDelete(req.params.id);
         if (!appointment) {
             return res.status(404).json({ error: 'Appointment not found' });
         }
@@ -45,4 +45,11 @@ exports.deleteAppointment = async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-};
+}
+
+module.exports = {
+    createAppointment,
+    getAllAppointments,
+    updateAppointment,
+    deleteAppointment
+  };
