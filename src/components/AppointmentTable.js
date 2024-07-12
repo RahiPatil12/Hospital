@@ -6,14 +6,24 @@ const AppointmentTable = () => {
   const [appointments, setAppointments] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [error, setError] = useState(null);
+  const [newAppointment, setNewAppointment] = useState({
+    firstName: '',
+    lastName: '',
+    dateOfBirth: '',
+    email: '',
+    phoneNumber: '',
+    appointmentType: ''
+  });
 
   useEffect(() => { 
     fetchAppointments();
   }, []);
 
   const fetchAppointments = () => {
-    axios.get('http://localhost:5000/api/appointments') // Full URL to the backend API
+
+    axios.get('http://localhost:5000/api/appointments') 
       .then(response => {
+        console.log("RahiPatil")
         setAppointments(response.data);
         setError(null);
       })
@@ -62,6 +72,34 @@ const AppointmentTable = () => {
     const updatedAppointments = [...appointments];
     updatedAppointments[index][field] = value;
     setAppointments(updatedAppointments);
+  };
+
+  const handleNewAppointmentChange = (field, value) => {
+    setNewAppointment(prevState => ({
+      ...prevState,
+      [field]: value
+    }));
+  };
+
+  const handleNewAppointmentSubmit = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:5000/api/appointments', newAppointment)
+      .then(response => {
+        setAppointments([...appointments, response.data]);
+        setNewAppointment({
+          firstName: '',
+          lastName: '',
+          dateOfBirth: '',
+          email: '',
+          phoneNumber: '',
+          appointmentType: ''
+        });
+        setError(null);
+      })
+      .catch(error => {
+        console.error('There was an error booking the appointment!', error);
+        setError('There was an error booking the appointment!');
+      });
   };
 
   return (
@@ -160,6 +198,47 @@ const AppointmentTable = () => {
           ))}
         </tbody>
       </table>
+
+      <h2>Book New Appointment</h2>
+      <form onSubmit={handleNewAppointmentSubmit} className="new-appointment-form">
+        <input 
+          type="text" 
+          placeholder="First Name" 
+          value={newAppointment.firstName} 
+          onChange={(e) => handleNewAppointmentChange('firstName', e.target.value)} 
+        />
+        <input 
+          type="text" 
+          placeholder="Last Name" 
+          value={newAppointment.lastName} 
+          onChange={(e) => handleNewAppointmentChange('lastName', e.target.value)} 
+        />
+        <input 
+          type="date" 
+          placeholder="Date of Birth" 
+          value={newAppointment.dateOfBirth} 
+          onChange={(e) => handleNewAppointmentChange('dateOfBirth', e.target.value)} 
+        />
+        <input 
+          type="email" 
+          placeholder="Email" 
+          value={newAppointment.email} 
+          onChange={(e) => handleNewAppointmentChange('email', e.target.value)} 
+        />
+        <input 
+          type="text" 
+          placeholder="Phone Number" 
+          value={newAppointment.phoneNumber} 
+          onChange={(e) => handleNewAppointmentChange('phoneNumber', e.target.value)} 
+        />
+        <input 
+          type="text" 
+          placeholder="Appointment Type" 
+          value={newAppointment.appointmentType} 
+          onChange={(e) => handleNewAppointmentChange('appointmentType', e.target.value)} 
+        />
+        <button type="submit">Book Appointment</button>
+      </form>
     </>
   );
 };

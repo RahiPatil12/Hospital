@@ -25,8 +25,9 @@ const AppointmentForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/book-appointment', formData)
+    axios.post('http://localhost:5000/api/book-appointment', formData)
       .then(response => {
+        console.log("Rahi Patil")
         setSuccess('Appointment booked successfully');
         setError('');
         setFormData({
