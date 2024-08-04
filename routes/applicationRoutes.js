@@ -1,9 +1,9 @@
-const express = require('express');
-const { createApplication, getApplications } = require('../controllers/applicationControllers');
-const router = express.Router();
+import { Router } from 'express';
+import { createApplication, getApplications } from '../controllers/applicationControllers.js'; // Ensure correct path
+
+const router = Router();
 
 router.post('/applications', createApplication);
 router.get('/applications', getApplications);
 
-module.exports = router;
-
+export default router;

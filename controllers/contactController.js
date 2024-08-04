@@ -1,8 +1,7 @@
-const Contact = require('../models/Contact');
+import Contact from '../models/Contact.js'; // Ensure the correct path and extension
 
 const createContact = async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
-  
 
   try {
     const newContact = new Contact({
@@ -21,4 +20,4 @@ const createContact = async (req, res) => {
   }
 };
 
-module.exports = { createContact};
+export default { createContact };
