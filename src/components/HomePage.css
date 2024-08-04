@@ -1,102 +1,27 @@
-/* .home-container {
-    text-align: center;
-    padding-top: 100px; /* Adjusted to account for the fixed navbar 
-  }
-/*   
-  .home-main {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10rem;
-  }
-
-   .HeroImg{
-    margin-top: 48px;
-    background-size: cover;
-    height: 600px;
-    width: 1448px;
-  }
-
-  .home-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3cm;
-    margin-right: 3cm;
-  } 
-
-  
-  .info-cards {
-    display: flex;
-    gap: 1cm;
-  }
-  
-  .info-card {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    backdrop-filter: blur(5px);
-  }
-  
-  .info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .info-card img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .info-card p {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  .info-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .info-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-  }  */
-
-  /*New*/
-
+.photo{
+  height: 20px;
+}
   .HeroImg{
     background-color: #222C64;
-    height: 350px;
-    width: 1430px;
+    height: 290px;
+    width: 1280px;
     border-radius: 30px;
     margin: 10px;
     display: flex;
     justify-content: center;
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     font-family: monospace;
     color: aliceblue; 
-
   }
 
   .quote{
-    margin-top: 45px;
+    margin-top: 10px;
     margin-right: 100px;
   }
 
   b{
-    font-size: 60px;
+    font-size: 50px;
     font-family: monospace;
     font-weight: 600;
   }
@@ -108,7 +33,7 @@
 
     .Box {
       width: 400px;
-      height: 220px;
+      height: 255px;
       background-color: #ff9cc5;
       border-radius: 20px;
       display: flex;
@@ -180,8 +105,9 @@
       color: #192255;
       display: flex;
       justify-content: center;
-      padding: 20px 20px 10px 20px;
+      padding: 20px 18px 10px 20px;
       border: #ebd0a8 solid 4px;
+      
   }
 
   .box4 .icon{
@@ -192,63 +118,48 @@
     transform: scale(1.01);
   }
   
-  .home-main {
+.HomeP{
+  margin-top: 100px;
+}
+
+  .Home2{
+    text-align: center;
+
+  }
+
+  .HomeCircle{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-color:#85c0be;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 200px;
-    margin-bottom: 200px;
-  } 
+    font-size: 60px;
+  }
 
-  .info-cards {
+  .HomeCircles{
     display: flex;
-    gap: 1cm;
+    justify-content: space-evenly;
+    margin-top: 100px;
   }
-  
-  .info-card {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    backdrop-filter: blur(5px);
-  }
-  
-  .info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .info-card img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
-  
-  .info-card p {
-    margin: 10px 0;
+
+  .HomeQuotes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-left: 70px;
     font-size: 18px;
+    margin-bottom: 100px;
+    font-weight: 600;
   }
-  
-  .info-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration:underline #4CAF50;
-  }
-  
-  .info-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-    text-decoration:underline #4CAF50;
-  }  
+
+ .Home2 h2{
+  background-color: #8de2a6;
+  border-radius: 20px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 

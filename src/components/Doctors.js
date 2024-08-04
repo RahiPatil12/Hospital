@@ -1,59 +1,6 @@
-// import React from 'react';
-// import './Doctors.css';
-// import { FaBone, FaBrain, FaWeight, FaEye } from 'react-icons/fa'
-
-// const doctors = [
-//     { name: 'Dr. Sanjana Gupta', specialization: 'Neurosurgeon', imageUrl: 'https://via.placeholder.com/100' },
-//     { name: 'Dr. Pimple Popper', specialization: 'Psychiatrist', imageUrl: 'https://via.placeholder.com/100' },
-//     { name: 'Dr. Sherry Ross', specialization: 'Gynecologist', imageUrl: 'https://via.placeholder.com/100' },
-//     { name: 'Dr. Jon Gunter', specialization: 'Neurologist', imageUrl: 'https://via.placeholder.com/100' },
-// ];
-
-// const DoctorCard = ({ name, specialization, imageUrl }) => (
-//     <div className="doctor-card">
-//         <img src={imageUrl} alt={name} />
-//         <h3>{name}</h3>
-//         <p>{specialization}</p>
-//     </div>
-// );
-
-// const Doctors = () => {
-//     return (
-//         <div className="doctors-container">
-//             <h2>Book an appointment for an<br />in-clinic consultation</h2>
-//             <div className='category'>
-//                 <div className='options'>
-//                     Orthopedic
-//                     <FaBone size={30} className='icons' />
-//                 </div>
-//                 <div className='options'>
-//                     Neurology
-//                     <FaBrain size={30} className='icons' />
-//                 </div>
-//                 <div className='options'>
-//                     Obesity
-//                     <FaWeight size={30} className='icons' />
-//                 </div>
-//                 <div className='options'>
-//                     Eye Care
-//                     <FaEye size={30} className='icons' />
-//                 </div>
-//             </div>
-//             <div className="doctor-list">
-//                 {doctors.map((doctor, index) => (
-//                     <DoctorCard key={index} {...doctor} />
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Doctors;
-
 import React, { useState } from 'react';
 import './Doctors.css';
 import { FaBone, FaBrain, FaWeight, FaEye } from 'react-icons/fa';
-// import boy1 from './images/boy1.png';
 import boy1 from './images/boy1.png';
 import girl1 from './images/girl1.png';
 import boy2 from './images/boy2.png';

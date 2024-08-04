@@ -1,0 +1,80 @@
+
+
+.addUser {
+    width: 40%;
+    height: 550px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 50px;
+    margin-bottom: 200px;
+    transition: transform 0.3s ease;
+}
+
+.addUser:hover {
+    transform: translateY(-10px);
+}
+
+.addUser h3 {
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.addUserForm {
+    margin-top: 20px;
+}
+
+.addUserForm .inputGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addUserForm .inputGroup label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+}
+
+.addUserForm .inputGroup input {
+    margin-bottom: 15px;
+    padding: 12px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.addUserForm .inputGroup input:focus {
+    border-color: #a29bfe;
+    box-shadow: 0 0 5px rgba(162, 155, 254, 0.5);
+}
+
+.addUserForm .inputGroup button {
+    border: 0;
+    outline: none;
+    background-color: #4e3ec1;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.addUserForm .inputGroup button:hover {
+    background-color: #6c5ce7;
+    transform: translateY(-1px);
+}
+
+.addUserForm .inputGroup button:active {
+    background-color: #3e30a6;
+    transform: translateY(1px);
+}

@@ -45,8 +45,7 @@ const Footer = () => {
         <div className="footer-section footer-logo">
           <h3>Our Hospital</h3>
           <address>
-            9100 E Mineral Cir<br />
-            Centennial, CO 80112
+            Oxycare hospital, Mahakali <br />Caves Road, Andheri (E),<br /> Mumbai-400093
           </address>
           <div className="social-icons">
             <FaFacebookF />
@@ -57,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2022 Our Hospital</p>
+        <p>© 2024 Our Hospital</p>
         <p>
           <span>ADA Compliance</span> | <span>Non Discrimination Statement</span> | <span>Disclaimer</span> | <span>Translation Disclaimer</span> | <span>Website Privacy & Security Policy</span>
         </p>

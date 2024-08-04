@@ -1,136 +1,4 @@
-/* .navbar{
-    width: 100%;
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px -6px #222;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 150px;
-    
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 19px;
-    font-weight: 650;
-  }
-  
-  .appointment-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .appointment-button:hover {
-    background-color: #45a049;
-  }
-  
-  .info-strip {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f7f7f7;
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-bar input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 5px;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .search-bar input:focus {
-    border-color: #ff7f50;
-    outline: none;
-  }
-  
-  .search-bar button {
-    background-color: #20b2aa;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  /*
-  .search-bar button:hover {
-    background-color: #3cb371;
-    /* transform: e; 
-  }
-    */
-  /*
-  .info-details {
-    display: flex;
-    align-items: center;
-  }
-  
-  .info-details p {
-    margin: 0 10px;
-  }
-  
-  .login-button {
-    background-color: #4169e1;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .login-button:hover {
-    background-color: #4682b4;
-    transform: ease;
-  }
 
-  .icon-s{
-    width: 60px;
-    padding-right:9px;
-  } */
-
-  /*New*/
-
-  /* Navbar.css */
 
 .navbar {
   display: flex;
@@ -145,6 +13,7 @@
 
 .navbar-left .logo {
   height: 60px;
+  margin-left: 20px;
 }
 
 .navbar-center {
@@ -167,7 +36,7 @@
 }
 
 .navbar-right .appointment-btn {
-  padding: 5px 10px;
+  padding: 6px 20px;
   font-size: 18px;
   background-color:#0056b3 ;
   color: #fff;
@@ -175,6 +44,7 @@
   border-radius: 14px;
   cursor: pointer;
   transition: background-color 0.3s;
+  
 }
 
 .navbar-right .appointment-btn:hover {
